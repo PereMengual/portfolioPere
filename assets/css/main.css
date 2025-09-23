@@ -513,7 +513,7 @@ section,
 # Global Section Titles
 --------------------------------------------------------------*/
 .section-title {
-  padding-bottom: 60px;
+  padding-bottom: 40px;
   position: relative;
 }
 
@@ -652,6 +652,14 @@ section,
 /*--------------------------------------------------------------
 # Stats Section
 --------------------------------------------------------------*/
+
+.stats {
+  color: var(--default-color);
+  background-color: var(--background-color);
+  padding: 10px 0;
+  overflow: clip;
+}
+
 .stats .stats-item {
   padding: 30px;
   width: 100%;
@@ -867,7 +875,7 @@ section,
   left: calc(50% - 20px);
   font-size: 26px;
   top: calc(50% - 14px);
-  color: #fff;
+  color: #ffffff;
   transition: 0.3s;
   line-height: 1.2;
 }
@@ -1271,6 +1279,7 @@ section,
 /*--------------------------------------------------------------
 # Starter Section Section
 --------------------------------------------------------------*/
+/*
 .starter-section {
-  /* Add your styles here */
-}
+  
+}*/
