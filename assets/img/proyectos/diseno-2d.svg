@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500" role="img" aria-label="Curva Bézier con manejadores y muestras de color">
+<title>Curva Bézier con manejadores y muestras de color</title>
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#040b14"/><stop offset="1" stop-color="#0c1a2b"/></linearGradient>
+<linearGradient id="brand" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#13e7fe"/><stop offset="1" stop-color="#a553f7"/></linearGradient>
+<linearGradient id="brandv" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#13e7fe"/><stop offset="1" stop-color="#a553f7"/></linearGradient>
+<radialGradient id="glow" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stop-color="#149ddd" stop-opacity="0.22"/><stop offset="1" stop-color="#149ddd" stop-opacity="0"/></radialGradient>
+<pattern id="dots" width="24" height="24" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.1" fill="#149ddd" fill-opacity="0.16"/></pattern>
+
+</defs>
+<rect width="800" height="500" fill="url(#bg)"/>
+<rect width="800" height="500" fill="url(#dots)"/>
+<ellipse cx="420" cy="230" rx="360" ry="220" fill="url(#glow)"/>
+<circle cx="560" cy="190" r="105" fill="#a553f7" fill-opacity="0.18" stroke="#a553f7" stroke-width="2"/>
+<rect x="470" y="210" width="170" height="170" rx="18" transform="rotate(14 555 295)" fill="#149ddd" fill-opacity="0.16" stroke="#149ddd" stroke-width="2"/>
+<path d="M110,360 C180,120 330,110 380,250 S600,420 690,270" fill="none" stroke="url(#brand)" stroke-width="6" stroke-linecap="round"/>
+<line x1="110" y1="360" x2="180" y2="120" stroke="#f4fafd" stroke-opacity="0.6" stroke-width="1.5"/><circle cx="180" cy="120" r="6" fill="#040b14" stroke="#f4fafd" stroke-width="2"/>
+<line x1="380" y1="250" x2="330" y2="110" stroke="#f4fafd" stroke-opacity="0.6" stroke-width="1.5"/><circle cx="330" cy="110" r="6" fill="#040b14" stroke="#f4fafd" stroke-width="2"/>
+<line x1="380" y1="250" x2="430" y2="390" stroke="#f4fafd" stroke-opacity="0.6" stroke-width="1.5"/><circle cx="430" cy="390" r="6" fill="#040b14" stroke="#f4fafd" stroke-width="2"/>
+<line x1="690" y1="270" x2="600" y2="420" stroke="#f4fafd" stroke-opacity="0.6" stroke-width="1.5"/><circle cx="600" cy="420" r="6" fill="#040b14" stroke="#f4fafd" stroke-width="2"/>
+<rect x="102" y="352" width="16" height="16" fill="#f4fafd" stroke="#149ddd" stroke-width="2"/>
+<rect x="372" y="242" width="16" height="16" fill="#f4fafd" stroke="#149ddd" stroke-width="2"/>
+<rect x="682" y="262" width="16" height="16" fill="#f4fafd" stroke="#149ddd" stroke-width="2"/>
+<circle cx="70" cy="450" r="16" fill="#040b14" stroke="#a8a9b4" stroke-opacity="0.5"/>
+<circle cx="114" cy="450" r="16" fill="#151f2b" stroke="#a8a9b4" stroke-opacity="0.5"/>
+<circle cx="158" cy="450" r="16" fill="#149ddd" stroke="#a8a9b4" stroke-opacity="0.5"/>
+<circle cx="202" cy="450" r="16" fill="#13e7fe" stroke="#a8a9b4" stroke-opacity="0.5"/>
+<circle cx="246" cy="450" r="16" fill="#a553f7" stroke="#a8a9b4" stroke-opacity="0.5"/>
+<circle cx="290" cy="450" r="16" fill="#f4fafd" stroke="#a8a9b4" stroke-opacity="0.5"/>
+<g transform="translate(700 70) rotate(40)"><path d="M0,-34 L12,0 L4,30 L-4,30 L-12,0 Z" fill="#f4fafd"/><circle cx="0" cy="2" r="4" fill="#040b14"/><line x1="0" y1="2" x2="0" y2="-34" stroke="#040b14" stroke-width="2"/></g>
+</svg>

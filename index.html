@@ -1,978 +1,687 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
   <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Index - iPortfolio Bootstrap Template</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Pere Mengual Roca | Portfolio</title>
+  <meta name="description" content="Portfolio de Pere Mengual Roca, graduado en Diseño y Desarrollo de Videojuegos por la UJI y estudiante del Máster en Sistemas Inteligentes. Premio al Mejor TFG de Videojuegos en el CEV26.">
+  <meta name="author" content="Pere Mengual Roca">
+  <meta name="theme-color" content="#f5f7fb" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#070c17" media="(prefers-color-scheme: dark)">
+  <meta name="color-scheme" content="light dark">
 
-  <!-- Favicons -->
-  <link href="assets/img/favicon3.png" rel="icon">
+  <!-- Vista previa al compartir el enlace -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:title" content="Pere Mengual Roca | Portfolio">
+  <meta property="og:description" content="Diseño y desarrollo de videojuegos, inteligencia artificial, diseño 2D/3D y web.">
+  <meta property="og:url" content="https://peremengual.github.io/portfolioPere/">
+  <meta property="og:image" content="https://peremengual.github.io/portfolioPere/assets/img/fotoPerfil.jpg">
+
+  <!-- Iconos -->
+  <link href="assets/img/favicon.png" rel="icon" type="image/png">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <!-- Tema guardado: se aplica antes de pintar para que no parpadee -->
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem("pmr-tema");
+        if (t === "light" || t === "dark") document.documentElement.setAttribute("data-theme", t);
+      } catch (e) {}
+    })();
+  </script>
 
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-
-  <!-- Main CSS File -->
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.min.css" rel="stylesheet">
   <link href="assets/css/main.css" rel="stylesheet">
-
-  <!-- =======================================================
-  * Template Name: iPortfolio
-  * Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
-  * Updated: Jun 29 2024 with Bootstrap v5.3.3
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
 </head>
 
-<body class="index-page">
+<body>
 
-  <header id="header" class="header dark-background d-flex flex-column">
-    <i class="header-toggle d-xl-none bi bi-list"></i>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
 
-    <div class="profile-img">
-      <img src="assets/img/fotoPerfil.jpg" alt="" class="img-fluid rounded-circle">
-    </div>
-
-    <a href="index.html" class="logo d-flex align-items-center justify-content-center">
-      <!-- Uncomment the line below if you also wish to use an image logo -->
-      <!-- <img src="assets/img/logo.png" alt=""> -->
-      <h1 class="sitename">Pere Mengual</h1>
+  <!-- ===================== Barra superior (móvil y tablet) ===================== -->
+  <div class="topbar">
+    <a href="#inicio" class="topbar-brand">
+      <img src="assets/img/fotoPerfil.jpg" alt="" width="36" height="36">
+      <span>Pere Mengual Roca</span>
     </a>
+    <div class="topbar-actions">
+      <button class="icon-btn theme-toggle" type="button" data-theme-toggle aria-label="Cambiar a tema oscuro">
+        <i class="bi bi-moon-stars" aria-hidden="true"></i>
+      </button>
+      <button class="icon-btn menu-toggle" type="button" aria-controls="side" aria-expanded="false" aria-label="Abrir menú">
+        <i class="bi bi-list" aria-hidden="true"></i>
+      </button>
+    </div>
+  </div>
 
-    <div class="social-links text-center">
-      <a href="https://x.com/PereMengualRoca" class="twitter"><i class="bi bi-twitter-x"></i></a>
-      <a href="https://www.instagram.com/peremr03/" class="instagram"><i class="bi bi-instagram"></i></a>
-      <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
-      <a href="https://www.youtube.com/@PereMengualRoca" class="youtube"><i class="bi bi-youtube"></i></a>
+  <!-- ===================== Menú lateral ===================== -->
+  <aside id="side" class="side" aria-label="Perfil y navegación">
+
+    <div class="side-id">
+      <a class="side-photo" href="#sobre-mi" aria-label="Sobre mí">
+        <img src="assets/img/fotoPerfil.jpg" alt="Foto de Pere Mengual Roca" width="112" height="112">
+      </a>
+      <a class="side-name" href="#inicio">Pere Mengual Roca</a>
+      <p class="side-tag">Videojuegos e inteligencia artificial</p>
+      <ul class="side-social" aria-label="Redes sociales">
+        <li><a href="https://github.com/peremengual" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub"><i class="bi bi-github" aria-hidden="true"></i></a></li>
+        <li><a href="https://www.youtube.com/@PereMengualRoca" target="_blank" rel="noopener" aria-label="YouTube" title="YouTube"><i class="bi bi-youtube" aria-hidden="true"></i></a></li>
+        <li><a href="https://x.com/PereMengualRoca" target="_blank" rel="noopener" aria-label="X (Twitter)" title="X"><i class="bi bi-twitter-x" aria-hidden="true"></i></a></li>
+        <li><a href="https://www.instagram.com/peremr03/" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram"><i class="bi bi-instagram" aria-hidden="true"></i></a></li>
+        <li><a href="mailto:peremr11@gmail.com" aria-label="Email" title="Email"><i class="bi bi-envelope" aria-hidden="true"></i></a></li>
+        <!-- Cuando recuperes LinkedIn, descomenta esta línea y pon tu enlace:
+        <li><a href="https://www.linkedin.com/in/TU-USUARIO" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn"><i class="bi bi-linkedin" aria-hidden="true"></i></a></li>
+        -->
+      </ul>
     </div>
 
-    <nav id="navmenu" class="navmenu">
-      <ul>
-        <li><a href="#hero" class="active"><i class="bi bi-house navicon"></i>Inicio</a></li>
-        <li><a href="#about"><i class="bi bi-person navicon"></i>Sobre Mí</a></li>
-        <li><a href="#skills"><i class="bi bi-laptop navicon"></i>Habilidades</a></li>
-        <li><a href="#resume"><i class="bi bi-file-earmark-text navicon"></i>Formación</a></li>
-        <li><a href="#portfolio"><i class="bi bi-images navicon"></i>Proyectos</a></li>
-        <li><a href="#services"><i class="bi bi-hdd-stack navicon"></i>Servicios</a></li>
-        <li><a href="#testimonials"><i class="bi bi-shop-window navicon"></i>Clientes</a></li>
-        <li><a href="#contact"><i class="bi bi-envelope navicon"></i>Contactos</a></li>
-        <!--
-        <li class="dropdown"><a href="#"><i class="bi bi-menu-button navicon"></i> <span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-          <ul>
-            <li><a href="#">Dropdown 1</a></li>
-            <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-              <ul>
-                <li><a href="#">Deep Dropdown 1</a></li>
-                <li><a href="#">Deep Dropdown 2</a></li>
-                <li><a href="#">Deep Dropdown 3</a></li>
-                <li><a href="#">Deep Dropdown 4</a></li>
-                <li><a href="#">Deep Dropdown 5</a></li>
-              </ul>
-            </li>
-            <li><a href="#">Dropdown 2</a></li>
-            <li><a href="#">Dropdown 3</a></li>
-            <li><a href="#">Dropdown 4</a></li>
-          </ul>
-        </li>
-        -->
-        
-      </ul>
+    <nav class="side-nav" aria-label="Secciones">
+      <a href="#inicio" class="active"><i class="bi bi-house" aria-hidden="true"></i>Inicio</a>
+      <a href="#sobre-mi"><i class="bi bi-person" aria-hidden="true"></i>Sobre mí</a>
+      <a href="#habilidades"><i class="bi bi-sliders" aria-hidden="true"></i>Habilidades</a>
+      <a href="#proyectos"><i class="bi bi-grid-1x2" aria-hidden="true"></i>Proyectos</a>
+      <a href="#formacion"><i class="bi bi-mortarboard" aria-hidden="true"></i>Formación</a>
+      <a href="#servicios"><i class="bi bi-briefcase" aria-hidden="true"></i>Servicios</a>
+      <a href="#contacto"><i class="bi bi-envelope" aria-hidden="true"></i>Contacto</a>
     </nav>
 
-  </header>
-
-  <main class="main">
-
-    <!-- Hero Section -->
-    <section id="hero" class="hero section dark-background">
-
-      <img src="assets/img/fotoPerfil-bg.jpg" alt="" data-aos="fade-in" class="">
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-        <h2>Pere Mengual</h2>
-        <p><span class="typed" data-typed-items="Diseñador y Desarrollador de Videojuegos"></span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span></p>
-        <!--
-        <p>Soy <span class="typed" data-typed-items="Diseñador y Desarrollador de Videojuegos, Diseñador 2D y 3D, Diseñador y Desarrollador Web">Designer</span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span></p>
-      -->
-      </div>
-
-    </section><!-- /Hero Section -->
-
-    <!-- About Section -->
-    <section id="about" class="about section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>
-          Sobre Mí
-        </h2>
-        <p>
-          Soy Pere Mengual Roca y actualmente curso el último año del Grado en Diseño y Desarrollo de Videojuegos en la Universitat Jaume I. Aunque la titulación está orientada al mundo de los videojuegos, mi formación abarca un conjunto amplio de competencias que me permiten afrontar proyectos más allá de ese ámbito específico.
-          Me considero una persona comprometida y siempre dispuesta a afrontar nuevos retos. Si necesitas ayuda con algún proyecto y está dentro de mis posibilidades, estaré encantado de colaborar contigo.
-        </p>
-      </div><!-- End Section Title -->
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-        <div class="row gy-4 justify-content-center">
-          <div class="col-lg-4">
-            <img src="assets/img/fotoPerfil.jpg" class="img-fluid" alt="">
-          </div>
-          <div class="col-lg-8 content">
-            <h2>Diseñador y Desarrollador de Videojuegos</h2>
-            <p class="fst-italic py-3">
-              Podría definirme como un apasionado de los videojuegos, pero más allá de eso, disfruto desarrollando proyectos que me permiten explorar y fortalecer mi perfil como diseñador y programador. Me interesa especialmente todo lo relacionado con el diseño y desarrollo de videojuegos, creación de aplicaciones, desarrollo web, modelado y diseño en 2D y 3D, entre otros.
-            </p>
-            <div class="row">
-              <div class="col-lg-6">
-                <ul>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Nacimiento:</strong> <span>19 de enero de 2003</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Web:</strong> <span>peremengual.github.io/portfolioPere</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Teléfono:</strong> <span>(+34) 622 64 86 81</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Ciudad:</strong> <span>Vinaròs, Castellón, España</span></li>
-                </ul>
-              </div>
-              <div class="col-lg-6">
-                <ul>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Edad:</strong> <span>22</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Universidad:</strong> <span>Universitat Jaume I (UJI)</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Grado:</strong> <span>Diseño y Desarrollo de Videojuegos</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span>peremr19@gmail.com</span></li>
-                </ul>
-              </div>
-            </div>
-
-            <p class="fst-italic py-3">
-              Como estudiante de diseño y desarrollo de videojuegos, suelo inspirarme en los títulos que juego o estudio para recrear mecánicas y efectos visuales por mi cuenta. Fuera del diseño y desarrollo, me interesan actividades que estimulan mi creatividad, como el deporte, la ciencia y la animación, las cuales enriquecen mi forma de abordar los proyectos.
-            </p>
-          </div>
-
-          <!-- Stats Section -->
-          <section id="stats" class="stats">
-
-            <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-              <div class="row gy-4">
-
-                <div class="col-lg-3 col-md-6">
-                  <div class="stats-item">
-                    <i class="bi bi-emoji-smile"></i>
-                    <span data-purecounter-start="0" data-purecounter-end="6" data-purecounter-duration="1" class="purecounter"></span>
-                    <p><strong>Clientes</strong> <span>satisfechos</span></p>
-                  </div>
-                </div><!-- End Stats Item -->
-
-                <div class="col-lg-3 col-md-6">
-                  <div class="stats-item">
-                    <i class="bi bi-journal-richtext"></i>
-                    <span data-purecounter-start="0" data-purecounter-end="6" data-purecounter-duration="1" class="purecounter"></span>
-                    <p><strong>Proyectos</strong> <span>finalizados</span></p>
-                  </div>
-                </div><!-- End Stats Item -->
-
-                <div class="col-lg-3 col-md-6">
-                  <div class="stats-item">
-                    <i class="bi bi-headset"></i>
-                    <span data-purecounter-start="0" data-purecounter-end="80" data-purecounter-duration="1" class="purecounter"></span>
-                    <p><strong>Horas de atención</strong> <span>proporcionadas hasta ahora</span></p>
-                  </div>
-                </div><!-- End Stats Item -->
-
-                <div class="col-lg-3 col-md-6">
-                  <div class="stats-item">
-                    <i class="bi bi-person-workspace"></i>
-                    <span data-purecounter-start="0" data-purecounter-end="1" data-purecounter-duration="1" class="purecounter"></span>
-                    <p><strong>Años</strong> <br><span>de experiencia</span></p>
-                  </div>
-                </div><!-- End Stats Item -->
-
-              </div>
-
-            </div>
-
-          </section><!-- /Stats Section -->
-
-        </div>
-      </div>
-
-    </section><!-- /About Section -->
-
-    <!-- Skills Section -->
-    <section id="skills" class="skills section light-background">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Habilidades</h2>
-        <!--<p>Algunas de ellas son:</p>-->
-      </div><!-- End Section Title -->
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-        <div class="row skills-content skills-animation">
-
-          <!-- Columna izquierda -->
-          <div class="col-lg-6">
-
-            <!-- Motores de videojuegos -->
-            <h4 class="mb-3">Motores de Juego</h4>
-            <br>
-
-            <div class="progress">
-              <span class="skill"><span>Unity</span> <i class="val">80%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-
-            <div class="progress">
-              <span class="skill"><span>Unreal Engine</span> <i class="val">60%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-
-            <br>
-            <!-- Diseño y modelado 2D/3D -->
-            <h4 class="mb-3">Diseño Gráfico y Modelado</h4>
-            <br>
-
-            <div class="progress">
-              <span class="skill"><span>Blender</span> <i class="val">60%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-
-            <div class="progress">
-              <span class="skill"><span>3DS Max</span> <i class="val">80%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-
-            <div class="progress">
-              <span class="skill"><span>Krita</span> <i class="val">80%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-
-            <div class="progress">
-              <span class="skill"><span>Adobe Illustrator</span> <i class="val">80%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-
-            <br>
-          </div>
-
-          <!-- Columna derecha -->
-          <div class="col-lg-6">
-
-            <!-- Edición de video -->
-
-            <h4 class="mb-3">Edición de Video y Sonido</h4>
-            <br>
-
-            <div class="progress">
-              <span class="skill"><span>Adobe Premiere</span> <i class="val">80%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-
-            <div class="progress">
-              <span class="skill"><span>Audacity</span> <i class="val">70%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-
-            <br>
-            <!-- Desarrollo web -->
-
-            <h4 class="mb-3">Desarrollo Web</h4>
-            <br>
-
-            <div class="progress">
-              <span class="skill"><span>HTML</span> <i class="val">90%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-
-            <div class="progress">
-              <span class="skill"><span>CSS</span> <i class="val">80%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-
-            <div class="progress">
-              <span class="skill"><span>JavaScript</span> <i class="val">70%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-
-            <div class="progress">
-              <span class="skill"><span>JSON</span> <i class="val">80%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-
-            <br>
-          </div>
-        </div>
-      </div>
-
-    </section><!-- /Skills Section -->
-
-    <!-- Resume Section -->
-    <section id="resume" class="resume section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Formación</h2>
-        <!--<p>Mi formación incluye</p>-->
-      </div><!-- End Section Title -->
-
-      <div class="container">
-
-        <div class="row">
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-            <h3 class="resume-title">Grado en Diseño y Desarrollo de Videojuegos</h3>
-
-            <div class="resume-item pb-0">
-              <h4>Universitat Jaume I (UJI), Castellón</h4>
-              <h5>2021 – 2026</h5>
-            </div><!-- Edn Resume Item -->
-<!--
-            <h3 class="resume-title">Educación</h3>
-            <div class="resume-item">
-              <h4>Master of Fine Arts &amp; Graphic Design</h4>
-              <h5>2015 - 2016</h5>
-              <p><em>Rochester Institute of Technology, Rochester, NY</em></p>
-              <p>Qui deserunt veniam. Et sed aliquam labore tempore sed quisquam iusto autem sit. Ea vero voluptatum qui ut dignissimos deleniti nerada porti sand markend</p>
-            </div>
-
-            <div class="resume-item">
-              <h4>Bachelor of Fine Arts &amp; Graphic Design</h4>
-              <h5>2010 - 2014</h5>
-              <p><em>Rochester Institute of Technology, Rochester, NY</em></p>
-              <p>Quia nobis sequi est occaecati aut. Repudiandae et iusto quae reiciendis et quis Eius vel ratione eius unde vitae rerum voluptates asperiores voluptatem Earum molestiae consequatur neque etlon sader mart dila</p>
-            </div>
-          -->
-          </div>
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-            <h3 class="resume-title">Bachillerato Científico</h3>
-            <div class="resume-item">
-              <h4>IES Leopoldo Querol, Vinaròs</h4>
-              <h5>2019 – 2021</h5>
-            </div>
-          <!--
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-            <h3 class="resume-title">Professional Experience</h3>
-            <div class="resume-item">
-              <h4>Senior graphic design specialist</h4>
-              <h5>2019 - Present</h5>
-              <p><em>Experion, New York, NY </em></p>
-              <ul>
-                <li>Lead in the design, development, and implementation of the graphic, layout, and production communication materials</li>
-                <li>Delegate tasks to the 7 members of the design team and provide counsel on all aspects of the project. </li>
-                <li>Supervise the assessment of all graphic materials in order to ensure quality and accuracy of the design</li>
-                <li>Oversee the efficient use of production project budgets ranging from $2,000 - $25,000</li>
-              </ul>
-            </div>
-
-            <div class="resume-item">
-              <h4>Graphic design specialist</h4>
-              <h5>2017 - 2018</h5>
-              <p><em>Stepping Stone Advertising, New York, NY</em></p>
-              <ul>
-                <li>Developed numerous marketing programs (logos, brochures,infographics, presentations, and advertisements).</li>
-                <li>Managed up to 5 projects or tasks at a given time while under pressure</li>
-                <li>Recommended and consulted with clients on the most appropriate graphic design</li>
-                <li>Created 4+ design presentations and proposals a month for clients and account managers</li>
-              </ul>
-            </div>
-          -->
-
-          </div>
-
-        </div>
-
-        <div class="row">
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-            <h3 class="resume-title">Curso de Edición de Videos</h3>
-
-            <div class="resume-item pb-0">
-              <h4>Online</h4>
-              <h5>2025</h5>
-            </div><!-- Edn Resume Item -->
-<!--
-            <h3 class="resume-title">Educación</h3>
-            <div class="resume-item">
-              <h4>Master of Fine Arts &amp; Graphic Design</h4>
-              <h5>2015 - 2016</h5>
-              <p><em>Rochester Institute of Technology, Rochester, NY</em></p>
-              <p>Qui deserunt veniam. Et sed aliquam labore tempore sed quisquam iusto autem sit. Ea vero voluptatum qui ut dignissimos deleniti nerada porti sand markend</p>
-            </div>
-
-            <div class="resume-item">
-              <h4>Bachelor of Fine Arts &amp; Graphic Design</h4>
-              <h5>2010 - 2014</h5>
-              <p><em>Rochester Institute of Technology, Rochester, NY</em></p>
-              <p>Quia nobis sequi est occaecati aut. Repudiandae et iusto quae reiciendis et quis Eius vel ratione eius unde vitae rerum voluptates asperiores voluptatem Earum molestiae consequatur neque etlon sader mart dila</p>
-            </div>
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-            <h3 class="resume-title">Professional Experience</h3>
-            <div class="resume-item">
-              <h4>Senior graphic design specialist</h4>
-              <h5>2019 - Present</h5>
-              <p><em>Experion, New York, NY </em></p>
-              <ul>
-                <li>Lead in the design, development, and implementation of the graphic, layout, and production communication materials</li>
-                <li>Delegate tasks to the 7 members of the design team and provide counsel on all aspects of the project. </li>
-                <li>Supervise the assessment of all graphic materials in order to ensure quality and accuracy of the design</li>
-                <li>Oversee the efficient use of production project budgets ranging from $2,000 - $25,000</li>
-              </ul>
-            </div>
-
-            <div class="resume-item">
-              <h4>Graphic design specialist</h4>
-              <h5>2017 - 2018</h5>
-              <p><em>Stepping Stone Advertising, New York, NY</em></p>
-              <ul>
-                <li>Developed numerous marketing programs (logos, brochures,infographics, presentations, and advertisements).</li>
-                <li>Managed up to 5 projects or tasks at a given time while under pressure</li>
-                <li>Recommended and consulted with clients on the most appropriate graphic design</li>
-                <li>Created 4+ design presentations and proposals a month for clients and account managers</li>
-              </ul>
-            </div>
-          -->
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </section><!-- /Resume Section -->
-
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="portfolio section light-background">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Proyectos</h2>
-        <!--<p>Estas son algunos de los proyectos que he ido realizando.</p>-->
-      </div><!-- End Section Title -->
-
-      <div class="container">
-
-        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
-
-          <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
-            <li data-filter="*" class="filter-active">TODO</li>
-            <li data-filter=".filter-app">UNITY</li>
-            <li data-filter=".filter-product">BLENDER</li>
-            <li data-filter=".filter-branding">VIDEOS</li>
-          </ul><!-- End Portfolio Filters -->
-
-          <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/interrogante.jpg" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>Unity 1</h4>
-                  <!--<p>Lorem ipsum, dolor sit amet consectetur</p>-->
-                  <!--<a href="assets/img/portfolio/app-1.jpg" title="App 1" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>-->
-                  <!--<a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>-->
-                  <a href="assets/img/portfolio/interrogante.jpg" title="Unity 1" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/interrogante.jpg" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>Blender 1</h4>
-                  <!--<p>Lorem ipsum, dolor sit amet consectetur</p>-->
-                  <a href="assets/img/portfolio/interrogante.jpg" title="Blender 1" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <!--<a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>-->
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/interrogante.jpg" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>Video 1</h4>
-                  <!--<p>Lorem ipsum, dolor sit amet consectetur</p>-->
-                  <a href="assets/img/portfolio/interrogante.jpg" title="Video 1" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <!--<a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>-->
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-books">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/interrogante.jpg" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>Otros 1</h4>
-                  <!--<p>Lorem ipsum, dolor sit amet consectetur</p>-->
-                  <a href="assets/img/portfolio/interrogante.jpg" title="Otros 1" data-gallery="portfolio-gallery-book" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <!--<a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>-->
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/interrogante.jpg" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>Unity 2</h4>
-                  <!--<p>Lorem ipsum, dolor sit amet consectetur</p>-->
-                  <a href="assets/img/portfolio/interrogante.jpg" title="Unity 2" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <!--<a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>-->
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/interrogante.jpg" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>Blender 2</h4>
-                  <!--<p>Lorem ipsum, dolor sit amet consectetur</p>-->
-                  <a href="assets/img/portfolio/interrogante.jpg" title="Blender 2" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <!--<a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>-->
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/interrogante.jpg" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>Video 2</h4>
-                  <!--<p>Lorem ipsum, dolor sit amet consectetur</p>-->
-                  <a href="assets/img/portfolio/interrogante.jpg" title="Video 2" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <!--<a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>-->
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-books">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/interrogante.jpg" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>Otros 2</h4>
-                  <!--<p>Lorem ipsum, dolor sit amet consectetur</p>-->
-                  <a href="assets/img/portfolio/interrogante.jpg" title="Otros 2" data-gallery="portfolio-gallery-book" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <!--<a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>-->
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/interrogante.jpg" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>Unity 3</h4>
-                  <!--<p>Lorem ipsum, dolor sit amet consectetur</p>-->
-                  <a href="assets/img/portfolio/interrogante.jpg" title="Unity 3" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <!--<a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>-->
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/interrogante.jpg" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>Blender 3</h4>
-                  <!--<p>Lorem ipsum, dolor sit amet consectetur</p>-->
-                  <a href="assets/img/portfolio/interrogante.jpg" title="Blender 3" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <!--<a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>-->
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/interrogante.jpg" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>Video 3</h4>
-                  <!--<p>Lorem ipsum, dolor sit amet consectetur</p>-->
-                  <a href="assets/img/portfolio/interrogante.jpg" title="Video 3" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <!--<a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>-->
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-books">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/interrogante.jpg" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>Otros 3</h4>
-                  <!--<p>Lorem ipsum, dolor sit amet consectetur</p>-->
-                  <a href="assets/img/portfolio/interrogante.jpg" title="Otros 3" data-gallery="portfolio-gallery-book" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <!--<a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>-->
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-          </div><!-- End Portfolio Container -->
-
-        </div>
-
-      </div>
-
-    </section><!-- /Portfolio Section -->
-
-    <!-- Services Section -->
-<section id="services" class="services section">
-
-  <!-- Section Title -->
-  <div class="container section-title" data-aos="fade-up">
-    <h2>Servicios que puedo ofrecerte</h2>
-    <!--
-    <p>Cuento con experiencia en áreas tanto de diseño como de programación, utilizando diversas herramientas y entornos de desarrollo. Aquí encontrarás algunos de los servicios que ofrezco, pero si necesitas algo diferente, no dudes en escribirme a través de mis redes sociales. Estoy abierto a nuevos desafíos y es muy probable que pueda ayudarte.</p>
-    -->
-  </div>
-
-  <div class="container">
-
-    <div class="row gy-4">
-
-      <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="100">
-        <div class="icon flex-shrink-0"><i class="bi bi-controller"></i></div>
-        <div>
-          <h4 class="title"><a href="service-details.html" class="stretched-link">Videojuegos</a></h4>
-          <p class="description">programación, arte, sonido, etc.</p>
-        </div>
-      </div>
-      <!-- End Service Item -->
-
-      <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="200">
-        <div class="icon flex-shrink-0"><i class="bi bi-card-checklist"></i></div>
-        <div>
-          <h4 class="title"><a href="service-details.html" class="stretched-link">Sitios web personalizados</a></h4>
-          <p class="description">como portfolios o páginas profesionales.</p>
-        </div>
-      </div><!-- End Service Item -->
-
-      <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="300">
-        <div class="icon flex-shrink-0"><i class="bi bi-phone"></i></div>
-        <div>
-          <h4 class="title"><a href="service-details.html" class="stretched-link">Aplicaciones móviles</a></h4>
-          <p class="description">funcionales y visualmente atractivas.</p>
-        </div>
-      </div><!-- End Service Item -->
-
-      <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="400">
-        <div class="icon flex-shrink-0"><i class="bi bi-badge-3d"></i></div>
-        <div>
-          <h4 class="title"><a href="service-details.html" class="stretched-link">Diseños 3D</a></h4>
-          <p class="description">modelado, texturizado, iluminación, etc.</p>
-        </div>
-      </div><!-- End Service Item -->
-
-      <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="500">
-        <div class="icon flex-shrink-0"><i class="bi bi-brush"></i></div>
-        <div>
-          <h4 class="title"><a href="service-details.html" class="stretched-link">Diseño 2D</a></h4>
-          <p class="description">sprites, logotipos, ilustraciones, etc.</p>
-        </div>
-      </div><!-- End Service Item -->
-
-      <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="600">
-        <div class="icon flex-shrink-0"><i class="bi bi-calendar4-week"></i></div>
-        <div>
-          <h4 class="title"><a href="service-details.html" class="stretched-link">Y mucho más</a></h4>
-          <p class="description">Contáctame para más información.</p>
-        </div>
-      </div><!-- End Service Item -->
-
+    <div class="side-foot">
+      <a class="btn btn-primary btn-block" href="assets/docs/CV-Pere-Mengual-Roca.pdf" target="_blank" rel="noopener">
+        <i class="bi bi-file-earmark-arrow-down" aria-hidden="true"></i> Descargar CV
+      </a>
+      <button class="side-theme" type="button" data-theme-toggle>
+        <i class="bi bi-moon-stars" aria-hidden="true"></i><span class="theme-label">Tema oscuro</span>
+      </button>
     </div>
 
-  </div>
+  </aside>
+  <div class="scrim" hidden></div>
 
-</section><!-- /Services Section -->
+  <div class="page">
+    <main id="contenido">
 
-    <!-- Testimonials Section -->
-    <section id="testimonials" class="testimonials section light-background">
+      <!-- ===================== Inicio ===================== -->
+      <section id="inicio" class="hero">
+        <!-- Simulación de agentes autónomos (assets/js/main.js). Siguen al cursor; un clic los dispersa. -->
+        <canvas class="hero-agents" aria-hidden="true"></canvas>
 
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Clientes</h2>
-        <!--<p>Estas son algunas de sus opiniones</p>-->
-      </div><!-- End Section Title -->
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="swiper init-swiper">
-          <script type="application/json" class="swiper-config">
-            {
-              "loop": true,
-              "speed": 600,
-              "autoplay": {
-                "delay": 5000
-              },
-              "slidesPerView": "auto",
-              "pagination": {
-                "el": ".swiper-pagination",
-                "type": "bullets",
-                "clickable": true
-              },
-              "breakpoints": {
-                "320": {
-                  "slidesPerView": 1,
-                  "spaceBetween": 40
-                },
-                "1200": {
-                  "slidesPerView": 3,
-                  "spaceBetween": 1
-                }
-              }
-            }
-          </script>
-          <div class="swiper-wrapper">
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  <span>Sin opinión</span>
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
-                <img src="assets/img/testimonials/avatarDesconocido.jpg" class="testimonial-img" alt="">
-                <h3>Nadie</h3>
-                <h4>Oficio</h4>
-              </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  <span>Sin opinión</span>
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
-                <img src="assets/img/testimonials/avatarDesconocido.jpg" class="testimonial-img" alt="">
-                <h3>Nadie</h3>
-                <h4>Oficio</h4>
-              </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  <span>Sin opinión</span>
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
-                <img src="assets/img/testimonials/avatarDesconocido.jpg" class="testimonial-img" alt="">
-                <h3>Nadie</h3>
-                <h4>Oficio</h4>
-              </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  <span>Sin opinión</span>
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
-                <img src="assets/img/testimonials/avatarDesconocido.jpg" class="testimonial-img" alt="">
-                <h3>Nadie</h3>
-                <h4>Oficio</h4>
-              </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  <span>Sin opinión</span>
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
-                <img src="assets/img/testimonials/avatarDesconocido.jpg" class="testimonial-img" alt="">
-                <h3>Nadie</h3>
-                <h4>Oficio</h4>
-              </div>
-            </div><!-- End testimonial item -->
-
+        <div class="wrap hero-inner">
+          <div class="hero-copy">
+            <p class="kicker"><svg class="kick-graph" viewBox="0 0 24 14" aria-hidden="true"><path d="M3.5 10 12 4l8.5 5.5"/><circle cx="3.5" cy="10" r="2.6"/><circle cx="12" cy="4" r="2.6"/><circle cx="20.5" cy="9.5" r="2.6"/></svg>Portfolio, Vinaròs (Castellón)</p>
+            <h1 class="hero-name">Pere Mengual Roca</h1>
+            <!-- Los textos que se escriben solos están en data-roles, separados por |.
+                 data-icons indica el icono de cada uno (nombres de Bootstrap Icons). -->
+            <p class="role-line">
+              <span class="role-ic" aria-hidden="true"><i class="bi bi-controller"></i></span>
+              <span class="typed" data-roles="Diseñador y desarrollador de videojuegos|Estudiante de inteligencia artificial|Diseñador 2D y 3D" data-icons="controller|cpu|box">Diseñador y desarrollador de videojuegos</span><span class="caret" aria-hidden="true"></span>
+            </p>
+            <p class="hero-intro">
+              Graduado en Diseño y Desarrollo de Videojuegos por la Universitat Jaume I. Ahora amplío mi perfil hacia la inteligencia artificial con el Máster en Sistemas Inteligentes.
+            </p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="#proyectos"><i class="bi bi-grid-1x2" aria-hidden="true"></i> Ver proyectos</a>
+              <a class="btn btn-ghost" href="assets/docs/CV-Pere-Mengual-Roca.pdf" target="_blank" rel="noopener">
+                <i class="bi bi-file-earmark-arrow-down" aria-hidden="true"></i> Descargar CV
+              </a>
+            </div>
+            <p class="status"><span class="rec" aria-hidden="true"></span>Cursando el Máster en Sistemas Inteligentes (UJI)</p>
           </div>
-          <div class="swiper-pagination"></div>
         </div>
 
-      </div>
+        <div class="hero-foot" aria-hidden="true">
+          <div class="wrap hero-foot-inner">
+            <span class="hero-hint">Pasa el cursor y los agentes te seguirán. Haz clic para dispersarlos.</span>
+            <span class="sim-chip"><i class="bi bi-cpu"></i><span class="sim-text">Agentes autónomos: explorando</span></span>
+          </div>
+        </div>
+      </section>
 
-    </section><!-- /Testimonials Section -->
+      <!-- ===================== Premios (banda) ===================== -->
+      <section id="premios" class="awards-band" aria-label="Premios">
+        <div class="wrap awards-band-inner">
+          <p class="awards-band-title">Premios 2026</p>
+          <ul class="awards-band-list">
+            <li data-award>
+              <span class="medal"><i class="bi bi-trophy" aria-hidden="true"></i></span>
+              <span><strong>Premio al Mejor TFG de Videojuegos</strong>Congreso Español de Videojuegos, CEV26</span>
+            </li>
+            <li data-award>
+              <span class="medal medal--cyan"><i class="bi bi-award" aria-hidden="true"></i></span>
+              <span><strong>Premio a Mejor TFG del Grado</strong>GAMESIS 2026, Vinaròs</span>
+            </li>
+          </ul>
+          <a class="awards-band-link" href="#proyecto-destacado">Ver el proyecto <i class="bi bi-arrow-down-right" aria-hidden="true"></i></a>
+        </div>
+      </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact section">
+      <!-- ===================== Sobre mí ===================== -->
+      <section id="sobre-mi" class="section">
+        <div class="wrap">
+          <header class="section-head">
+            <p class="kicker"><svg class="kick-graph" viewBox="0 0 24 14" aria-hidden="true"><path d="M3.5 10 12 4l8.5 5.5"/><circle cx="3.5" cy="10" r="2.6"/><circle cx="12" cy="4" r="2.6"/><circle cx="20.5" cy="9.5" r="2.6"/></svg>Sobre mí</p>
+            <h2>Graduado en videojuegos, aprendiendo inteligencia artificial</h2>
+          </header>
 
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Contactos</h2>
-        <!--<p>Escríbeme para cualquier cosa que necesites</p>-->
-      </div><!-- End Section Title -->
+          <div class="about-grid">
+            <figure class="about-photo">
+              <div class="about-frame">
+                <img src="assets/img/fotoPerfil.jpg" alt="Retrato de Pere Mengual Roca" width="600" height="600" loading="lazy">
+              </div>
+              <!-- Trayectoria: del grado terminado al máster en curso -->
+              <figcaption class="path-card">
+                <span class="path-step is-done">
+                  <span class="path-ic" aria-hidden="true"><i class="bi bi-controller"></i></span>
+                  <span class="path-txt"><strong>Grado en Diseño y Desarrollo de Videojuegos</strong>Graduado en 2026</span>
+                  <i class="bi bi-check-circle-fill path-state" aria-hidden="true"></i>
+                </span>
+                <span class="path-step is-now">
+                  <span class="path-ic" aria-hidden="true"><i class="bi bi-cpu"></i></span>
+                  <span class="path-txt"><strong>Máster en Sistemas Inteligentes</strong>Aprendiendo IA, 2026 – 2027</span>
+                  <span class="path-live" aria-hidden="true"></span>
+                </span>
+              </figcaption>
+            </figure>
 
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
+            <div class="about-body">
+              <h3 class="about-role">Diseño y desarrollo de videojuegos<span class="sep" aria-hidden="true">&nbsp;/</span> <span class="sr-only">e</span> Inteligencia artificial</h3>
+              <div class="prose">
+                <p>Graduado en Diseño y Desarrollo de Videojuegos por la Universitat Jaume I y estudiante del Máster en Sistemas Inteligentes en la misma universidad.</p>
+                <p>Mi TFG, un sistema de reconocimiento de comandos de voz para videojuegos, ganó el Premio al Mejor TFG de Videojuegos en el CEV26. En el máster estoy ampliando mi perfil hacia la inteligencia artificial, con especial interés en los agentes inteligentes y la simulación.</p>
+                <p>También he realizado encargos freelance de diseño 2D y 3D, desarrollo web y edición de vídeo. Fuera del desarrollo me interesan el deporte, la ciencia y la animación.</p>
+              </div>
 
-        <div class="row gy-4">
-
-          <div class="col-lg-5">
-
-            <div class="info-wrap">
-              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
-                <i class="bi bi-geo-alt flex-shrink-0"></i>
-                <div>
-                  <h3>Dirección</h3>
-                  <p>Vinaròs, Castellón, España</p>
-                </div>
-              </div><!-- End Info Item -->
-
-              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
-                <i class="bi bi-telephone flex-shrink-0"></i>
-                <div>
-                  <h3>Número de teléfono</h3>
-                  <p>(+34) 622 64 86 81</p>
-                </div>
-              </div><!-- End Info Item -->
-
-              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
-                <i class="bi bi-envelope flex-shrink-0"></i>
-                <div>
-                  <h3>Email</h3>
-                  <p>peremr19@gmail.com</p>
-                </div>
-              </div><!-- End Info Item -->
-
-              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
-                <a href="https://x.com/PereMengualRoca"><i class="bi bi-twitter-x flex-shrink-0"></i></a>
-                <div>
-                  <h3>X:</h3>
-                  <p><a href="https://x.com/PereMengualRoca">https://x.com/PereMengualRoca</a></p>    
-      
-                </div>
-              </div><!-- End Info Item -->
-
-              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
-                <a href="https://www.instagram.com/peremr03"><i class="bi bi-instagram flex-shrink-0"></i></a>
-                <div>
-                  <h3>Instagram</h3>
-                  <p><a href="https://www.instagram.com/peremr03">https://www.instagram.com/peremr03</a></p>
-                </div>
-              </div><!-- End Info Item -->
-
-              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
-                <a href="#"><i class="bi bi-linkedin flex-shrink-0"></i></a>
-                <div>
-                  <h3>Linkedin</h3>
-                  <p><a href="#">Hackeada, pendiente de recuperar pronto</a></p>
-                </div>
-              </div><!-- End Info Item -->
-
-              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
-                <a href="https://www.youtube.com/@PereMengualRoca"><i class="bi bi-youtube flex-shrink-0"></i></a>
-                <div>
-                  <h3>YouTube</h3>
-                  <p><a href="https://www.youtube.com/@PereMengualRoca">https://www.youtube.com/@PereMengualRoca</a></p>
-                </div>
-              </div><!-- End Info Item -->
+              <h4 class="facts-title">Datos personales</h4>
+              <dl class="facts">
+                <div><dt><i class="bi bi-geo-alt" aria-hidden="true"></i>Ubicación</dt><dd>Vinaròs, Castellón</dd></div>
+                <div><dt><i class="bi bi-calendar3" aria-hidden="true"></i>Edad</dt><dd data-birth="2003-01-19">23 años</dd></div>
+                <div><dt><i class="bi bi-envelope" aria-hidden="true"></i>Email</dt><dd><a href="mailto:peremr11@gmail.com">peremr11@gmail.com</a></dd></div>
+                <div><dt><i class="bi bi-telephone" aria-hidden="true"></i>Teléfono</dt><dd><a href="tel:+34622648681">+34 622 64 86 81</a></dd></div>
+                <div><dt><i class="bi bi-mortarboard" aria-hidden="true"></i>Estudios actuales</dt><dd>Máster en Sistemas Inteligentes (UJI)</dd></div>
+                <div><dt><i class="bi bi-translate" aria-hidden="true"></i>Idiomas</dt><dd>Castellano y valenciano (nativo), inglés (B2)</dd></div>
+              </dl>
             </div>
           </div>
 
-          
-          <div class="col-lg-7">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3035.2521270984153!2d0.46984919034310363!3d40.46968687876172!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a04fd8c076c185%3A0x44ade2cfa5dfaf32!2sCarrer%20de%20la%20Mare%20de%20D%C3%A9u%20del%20Socors%2C%2012500%20Vinar%C3%B2s%2C%20Castell%C3%B3!5e0!3m2!1ses!2ses!4v1758560429956!5m2!1ses!2ses" frameborder="0" style="border:0; width: 100%; height: 100%;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            <!--
-            <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
-              <div class="row gy-4">
+          <!-- Las cifras se calculan solas a partir del contenido de la página (assets/js/main.js) -->
+          <ul class="stats" aria-label="Resumen en cifras">
+            <li><span class="stat-ic"><i class="bi bi-grid-1x2" aria-hidden="true"></i></span><span class="stat-num" data-count="proyectos">7</span><span class="stat-txt"><b>Proyectos</b> en este portfolio</span></li>
+            <li><span class="stat-ic"><i class="bi bi-trophy" aria-hidden="true"></i></span><span class="stat-num" data-count="premios">2</span><span class="stat-txt"><b>Premios</b> a mi TFG en 2026</span></li>
+            <li><span class="stat-ic"><i class="bi bi-mortarboard" aria-hidden="true"></i></span><span class="stat-num" data-count="titulaciones">2</span><span class="stat-txt"><b>Titulaciones</b> de grado y máster</span></li>
+            <li><span class="stat-ic"><i class="bi bi-tools" aria-hidden="true"></i></span><span class="stat-num" data-count="herramientas">21</span><span class="stat-txt"><b>Herramientas</b> y lenguajes</span></li>
+          </ul>
+        </div>
+      </section>
 
-                <div class="col-md-6">
-                  <label for="name-field" class="pb-2">Tu Nombre</label>
-                  <input type="text" name="name" id="name-field" class="form-control" required="">
-                </div>
+      <!-- ===================== Habilidades ===================== -->
+      <!--
+        Cada <li> de .tools es una herramienta. Si quieres mostrar una barra de nivel
+        (como en un ecualizador), añade data-nivel="1" a data-nivel="10", por ejemplo:
+        <li data-nivel="8">Unity</li>
+      -->
+      <section id="habilidades" class="section band">
+        <div class="wrap">
+          <header class="section-head">
+            <p class="kicker"><svg class="kick-graph" viewBox="0 0 24 14" aria-hidden="true"><path d="M3.5 10 12 4l8.5 5.5"/><circle cx="3.5" cy="10" r="2.6"/><circle cx="12" cy="4" r="2.6"/><circle cx="20.5" cy="9.5" r="2.6"/></svg>Habilidades</p>
+            <h2>Las herramientas con las que trabajo</h2>
+            <p class="lead">Lenguajes, motores y programas agrupados por área.</p>
+          </header>
 
-                <div class="col-md-6">
-                  <label for="email-field" class="pb-2">Tu Email</label>
-                  <input type="email" class="form-control" name="email" id="email-field" required="">
-                </div>
+          <div class="skills">
+            <div class="sk-group">
+              <h3><span class="sk-ic"><i class="bi bi-controller" aria-hidden="true"></i></span>Motores de videojuegos<span class="pill">Videojuegos</span></h3>
+              <ul class="tools"><li>Unity</li><li>Unreal Engine</li><li>GDevelop</li></ul>
+            </div>
 
-                <div class="col-md-12">
-                  <label for="subject-field" class="pb-2">Título Mensaje</label>
-                  <input type="text" class="form-control" name="subject" id="subject-field" required="">
-                </div>
+            <div class="sk-group sk-group--ia">
+              <h3><span class="sk-ic"><i class="bi bi-cpu" aria-hidden="true"></i></span>IA y ciencia de datos con Python<span class="pill pill--cyan">En el máster</span></h3>
+              <ul class="tools"><li>NumPy</li><li>pandas</li><li>Matplotlib</li><li>Google Colab</li></ul>
+            </div>
 
-                <div class="col-md-12">
-                  <label for="message-field" class="pb-2">Mensaje</label>
-                  <textarea class="form-control" name="message" rows="10" id="message-field" required=""></textarea>
-                </div>
+            <div class="sk-group">
+              <h3><span class="sk-ic"><i class="bi bi-code-slash" aria-hidden="true"></i></span>Programación<span class="pill">Desarrollo</span></h3>
+              <ul class="tools"><li>Python</li><li>C#</li><li>C++</li></ul>
+            </div>
 
-                <div class="col-md-12 text-center">
-                  <div class="loading">Cargando</div>
-                  <div class="error-message"></div>
-                  <div class="sent-message">Tu mensaje ha sido enviado. Gracias!</div>
+            <div class="sk-group">
+              <h3><span class="sk-ic"><i class="bi bi-globe2" aria-hidden="true"></i></span>Desarrollo web<span class="pill">Desarrollo</span></h3>
+              <ul class="tools"><li>HTML</li><li>CSS</li><li>JavaScript</li><li>JSON</li></ul>
+            </div>
 
-                  <button type="submit">Enviar Mensaje</button>
-                </div>
+            <div class="sk-group">
+              <h3><span class="sk-ic"><i class="bi bi-box" aria-hidden="true"></i></span>Diseño 2D y 3D<span class="pill pill--soft">Diseño</span></h3>
+              <ul class="tools"><li>Blender</li><li>3ds Max</li><li>Krita</li><li>Adobe Illustrator</li><li>Impresión 3D (básico)</li></ul>
+            </div>
 
+            <div class="sk-group">
+              <h3><span class="sk-ic"><i class="bi bi-film" aria-hidden="true"></i></span>Vídeo y sonido<span class="pill pill--soft">Diseño</span></h3>
+              <ul class="tools"><li>Adobe Premiere</li><li>Audacity</li></ul>
+            </div>
+          </div>
+
+          <div class="skills-extra">
+            <div>
+              <h3 class="extra-title"><i class="bi bi-people" aria-hidden="true"></i>Competencias personales</h3>
+              <ul class="chips"><li>Atención al detalle</li><li>Comunicación asertiva y proactiva</li></ul>
+            </div>
+            <div>
+              <h3 class="extra-title"><i class="bi bi-translate" aria-hidden="true"></i>Idiomas</h3>
+              <dl class="langs">
+                <div><dt>Castellano</dt><dd>Nativo</dd></div>
+                <div><dt>Valenciano</dt><dd>Nativo</dd></div>
+                <div><dt>Inglés</dt><dd>B2, certificación oficial en preparación</dd></div>
+              </dl>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== Proyectos ===================== -->
+      <section id="proyectos" class="section">
+        <div class="wrap">
+          <header class="section-head">
+            <p class="kicker"><svg class="kick-graph" viewBox="0 0 24 14" aria-hidden="true"><path d="M3.5 10 12 4l8.5 5.5"/><circle cx="3.5" cy="10" r="2.6"/><circle cx="12" cy="4" r="2.6"/><circle cx="20.5" cy="9.5" r="2.6"/></svg>Proyectos</p>
+            <h2>Una selección de mi trabajo</h2>
+            <p class="lead">Trabajo académico y encargos freelance. Pulsa una imagen para verla en grande.</p>
+          </header>
+
+          <!-- data-filter debe coincidir con alguna palabra de data-category en cada proyecto. Los números se cuentan solos. -->
+          <div class="filters" role="group" aria-label="Filtrar proyectos">
+            <button type="button" class="chip-btn" data-filter="*" aria-pressed="true">Todos <span class="n">7</span></button>
+            <button type="button" class="chip-btn" data-filter="desarrollo" aria-pressed="false">Desarrollo <span class="n">4</span></button>
+            <button type="button" class="chip-btn" data-filter="diseno" aria-pressed="false">Diseño y audiovisual <span class="n">3</span></button>
+          </div>
+
+          <!--
+            Para añadir un proyecto, copia uno de los <article class="card">.
+            data-images: imágenes que se ven en grande al pulsar, separadas por comas.
+            Para usar capturas reales, guárdalas en assets/img/proyectos/ (proporción 16:10, p. ej. 1600x1000)
+            y cambia tanto el src de la portada como data-images.
+          -->
+          <div class="grid">
+
+            <!-- Proyecto destacado: TFG. La imagen es una demo en directo del método. -->
+            <article class="card card--feat" id="proyecto-destacado" data-category="desarrollo" data-images="assets/img/proyectos/tfg-voz-mfcc-dtw.svg">
+              <div class="feat-media">
+                <figure class="dtw">
+                  <div class="dtw-plot">
+                    <span class="dtw-axis dtw-axis--y" aria-hidden="true">Grabación de referencia</span>
+                    <canvas class="dtw-canvas" width="770" height="610" role="img"
+                      aria-label="Matriz de Dynamic Time Warping: compara cada instante de una grabación de referencia con cada instante de la orden del jugador. Las casillas claras son instantes parecidos y la línea blanca es el camino de alineamiento de menor coste."></canvas>
+                    <span class="dtw-axis dtw-axis--x" aria-hidden="true">Orden del jugador</span>
+                  </div>
+                  <figcaption class="dtw-caption">
+                    <p>El método, en directo: DTW encuentra el camino de menor coste entre dos pronunciaciones de la misma orden, aunque una sea más rápida que la otra.</p>
+                    <div class="dtw-actions">
+                      <button type="button" class="btn btn-on-dark btn-sm dtw-btn"><i class="bi bi-arrow-repeat" aria-hidden="true"></i> Otra pronunciación</button>
+                      <button type="button" class="btn btn-on-dark btn-sm" data-open-lb><i class="bi bi-arrows-angle-expand" aria-hidden="true"></i> Ver ilustración</button>
+                    </div>
+                  </figcaption>
+                </figure>
               </div>
-            </form>
-          </div>-->
+
+              <div class="card-body">
+                <p class="meta"><span class="cat">Trabajo de Fin de Grado</span><span class="yr">2026</span></p>
+                <h3>Reconocimiento de comandos de voz para videojuegos</h3>
+                <p class="card-paper" lang="en">Design and implementation of a voice command recognition system for video games based on MFCC and Dynamic Time Warping</p>
+                <p class="card-desc">Sistema que permite controlar un videojuego con órdenes habladas. Extrae los coeficientes MFCC de la voz del jugador y los compara con grabaciones de referencia mediante Dynamic Time Warping (DTW), una técnica que alinea dos secuencias aunque se pronuncien a distinta velocidad.</p>
+                <ul class="highlights">
+                  <li><i class="bi bi-trophy" aria-hidden="true"></i>Premio al Mejor TFG de Videojuegos en el CEV26</li>
+                  <li><i class="bi bi-easel" aria-hidden="true"></i>Presentado ante los asistentes al congreso</li>
+                  <li><i class="bi bi-journal-text" aria-hidden="true"></i>Artículo corto en las actas del CEV26 (pendiente de publicación)</li>
+                  <li><i class="bi bi-award" aria-hidden="true"></i>Entre las tres mejores calificaciones de TFG del grado</li>
+                </ul>
+                <ul class="tags" aria-label="Tecnologías"><li>Procesamiento de audio</li><li>MFCC</li><li>DTW</li><li>Reconocimiento de voz</li></ul>
+              </div>
+            </article>
+
+            <article class="card" data-category="desarrollo" data-images="assets/img/proyectos/videojuegos.svg">
+              <button class="thumb" type="button" data-open-lb aria-label="Ver en grande: Videojuegos y prototipos jugables">
+                <img src="assets/img/proyectos/videojuegos.svg" alt="" width="800" height="500" loading="lazy">
+                <span class="zoom"><i class="bi bi-arrows-angle-expand" aria-hidden="true"></i></span>
+              </button>
+              <div class="card-body">
+                <p class="meta"><span class="cat">Videojuegos</span><span class="yr">Grado, 2021 – 2026</span></p>
+                <h3>Videojuegos y prototipos jugables</h3>
+                <p class="card-desc">Juegos y prototipos creados durante el grado y por mi cuenta, recreando mecánicas y efectos visuales de títulos que estudio.</p>
+                <ul class="tags" aria-label="Tecnologías"><li>Unity</li><li>GDevelop</li><li>C#</li></ul>
+              </div>
+            </article>
+
+            <article class="card" data-category="desarrollo" data-images="assets/img/proyectos/analisis-datos.svg">
+              <button class="thumb" type="button" data-open-lb aria-label="Ver en grande: Análisis y visualización de datos">
+                <img src="assets/img/proyectos/analisis-datos.svg" alt="" width="800" height="500" loading="lazy">
+                <span class="zoom"><i class="bi bi-arrows-angle-expand" aria-hidden="true"></i></span>
+              </button>
+              <div class="card-body">
+                <p class="meta"><span class="cat cat--cyan">IA y datos</span><span class="yr">Máster, en curso</span></p>
+                <h3>Análisis y visualización de datos</h3>
+                <p class="card-desc">Cuadernos de Python en Google Colab para limpiar, analizar y visualizar conjuntos de datos, desarrollados en el Máster en Sistemas Inteligentes.</p>
+                <ul class="tags" aria-label="Tecnologías"><li>Python</li><li>NumPy</li><li>pandas</li><li>Matplotlib</li><li>Google Colab</li></ul>
+              </div>
+            </article>
+
+            <article class="card" data-category="desarrollo" data-images="assets/img/proyectos/webs.svg">
+              <button class="thumb" type="button" data-open-lb aria-label="Ver en grande: Webs a medida">
+                <img src="assets/img/proyectos/webs.svg" alt="" width="800" height="500" loading="lazy">
+                <span class="zoom"><i class="bi bi-arrows-angle-expand" aria-hidden="true"></i></span>
+              </button>
+              <div class="card-body">
+                <p class="meta"><span class="cat">Web</span><span class="yr">Freelance, 2024 – 2025</span></p>
+                <h3>Webs a medida</h3>
+                <p class="card-desc">Diseño visual y desarrollo de páginas web para encargos particulares, incluido este portfolio.</p>
+                <ul class="tags" aria-label="Tecnologías"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
+              </div>
+            </article>
+
+            <article class="card" data-category="diseno" data-images="assets/img/proyectos/modelado-3d.svg">
+              <button class="thumb" type="button" data-open-lb aria-label="Ver en grande: Modelado y render 3D">
+                <img src="assets/img/proyectos/modelado-3d.svg" alt="" width="800" height="500" loading="lazy">
+                <span class="zoom"><i class="bi bi-arrows-angle-expand" aria-hidden="true"></i></span>
+              </button>
+              <div class="card-body">
+                <p class="meta"><span class="cat">Diseño 3D</span><span class="yr">Freelance, 2024 – 2025</span></p>
+                <h3>Modelado y render 3D</h3>
+                <p class="card-desc">Modelado, texturizado, iluminación y renderizado de piezas 3D para encargos particulares.</p>
+                <ul class="tags" aria-label="Tecnologías"><li>Blender</li><li>3ds Max</li></ul>
+              </div>
+            </article>
+
+            <article class="card" data-category="diseno" data-images="assets/img/proyectos/diseno-2d.svg">
+              <button class="thumb" type="button" data-open-lb aria-label="Ver en grande: Ilustración y diseño 2D">
+                <img src="assets/img/proyectos/diseno-2d.svg" alt="" width="800" height="500" loading="lazy">
+                <span class="zoom"><i class="bi bi-arrows-angle-expand" aria-hidden="true"></i></span>
+              </button>
+              <div class="card-body">
+                <p class="meta"><span class="cat">Diseño 2D</span><span class="yr">Freelance, 2024 – 2025</span></p>
+                <h3>Ilustración y diseño 2D</h3>
+                <p class="card-desc">Sprites, logotipos e ilustraciones para videojuegos y encargos particulares.</p>
+                <ul class="tags" aria-label="Tecnologías"><li>Krita</li><li>Adobe Illustrator</li></ul>
+              </div>
+            </article>
+
+            <article class="card" data-category="diseno" data-images="assets/img/proyectos/edicion-video.svg">
+              <button class="thumb" type="button" data-open-lb aria-label="Ver en grande: Edición de vídeo y sonido">
+                <img src="assets/img/proyectos/edicion-video.svg" alt="" width="800" height="500" loading="lazy">
+                <span class="zoom"><i class="bi bi-arrows-angle-expand" aria-hidden="true"></i></span>
+              </button>
+              <div class="card-body">
+                <p class="meta"><span class="cat">Vídeo y sonido</span><span class="yr">Freelance, 2024 – 2025</span></p>
+                <h3>Edición de vídeo y sonido</h3>
+                <p class="card-desc">Montaje, edición y tratamiento de audio para vídeos de encargo.</p>
+                <ul class="tags" aria-label="Tecnologías"><li>Adobe Premiere</li><li>Audacity</li></ul>
+              </div>
+            </article>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== Formación ===================== -->
+      <section id="formacion" class="section band">
+        <div class="wrap">
+          <header class="section-head">
+            <p class="kicker"><svg class="kick-graph" viewBox="0 0 24 14" aria-hidden="true"><path d="M3.5 10 12 4l8.5 5.5"/><circle cx="3.5" cy="10" r="2.6"/><circle cx="12" cy="4" r="2.6"/><circle cx="20.5" cy="9.5" r="2.6"/></svg>Formación</p>
+            <h2>Estudios, experiencia y reconocimientos</h2>
+          </header>
+
+          <div class="resume">
+
+            <div class="resume-col">
+              <h3 class="col-title"><span class="col-ic"><i class="bi bi-mortarboard" aria-hidden="true"></i></span>Formación académica</h3>
+              <ol class="tl">
+                <li class="tl-item is-current" data-degree>
+                  <h4>Máster en Sistemas Inteligentes</h4>
+                  <p class="tl-meta"><span class="period">2026 – 2027</span><span class="place">Universitat Jaume I (UJI), Castellón</span></p>
+                  <p>Inteligencia artificial y robótica, con interés en agentes inteligentes y simulación.</p>
+                  <span class="pill pill--live">En curso</span>
+                </li>
+                <li class="tl-item" data-degree>
+                  <h4>Grado en Diseño y Desarrollo de Videojuegos</h4>
+                  <p class="tl-meta"><span class="period">2021 – 2026</span><span class="place">Universitat Jaume I (UJI), Castellón</span></p>
+                  <p>TFG premiado en el CEV26 y entre las tres mejores calificaciones del grado.</p>
+                </li>
+                <li class="tl-item">
+                  <h4>Bachillerato Científico</h4>
+                  <p class="tl-meta"><span class="period">2019 – 2021</span><span class="place">IES Leopoldo Querol, Vinaròs</span></p>
+                </li>
+              </ol>
+
+              <h3 class="col-title"><span class="col-ic"><i class="bi bi-patch-check" aria-hidden="true"></i></span>Cursos complementarios</h3>
+              <ol class="tl">
+                <li class="tl-item">
+                  <h4>Curso de Iniciación a la Impresión 3D</h4>
+                  <p class="tl-meta"><span class="period">Noviembre 2025</span><span class="place">Espaitec, Castellón</span></p>
+                </li>
+                <li class="tl-item">
+                  <h4>Curso de Edición de Vídeo</h4>
+                  <p class="tl-meta"><span class="period">Septiembre – octubre 2025</span><span class="place">Online</span></p>
+                </li>
+              </ol>
+            </div>
+
+            <div class="resume-col">
+              <h3 class="col-title"><span class="col-ic"><i class="bi bi-trophy" aria-hidden="true"></i></span>Premios y publicaciones</h3>
+              <ol class="tl">
+                <li class="tl-item tl-item--award">
+                  <span class="tl-medal" aria-hidden="true"><i class="bi bi-trophy"></i></span>
+                  <h4>Premio al Mejor TFG de Videojuegos</h4>
+                  <p class="tl-meta"><span class="period">2026</span><span class="place">Congreso Español de Videojuegos (CEV26)</span></p>
+                  <p>Reconocimiento al mejor Trabajo de Fin de Grado presentado en el congreso. Como parte del premio, presenté el proyecto ante los asistentes y el trabajo se publicará como artículo corto en las actas del congreso.</p>
+                </li>
+                <li class="tl-item tl-item--award">
+                  <span class="tl-medal" aria-hidden="true"><i class="bi bi-award"></i></span>
+                  <h4>Premio a Mejor TFG del Grado</h4>
+                  <p class="tl-meta"><span class="period">Octubre 2026</span><span class="place">GAMESIS 2026, Vinaròs</span></p>
+                  <p>Reconocimiento a los tres Trabajos de Fin de Grado con mejor calificación del Grado en Diseño y Desarrollo de Videojuegos de la UJI en el curso 2025-2026.</p>
+                </li>
+                <li class="tl-item tl-item--paper">
+                  <span class="tl-medal" aria-hidden="true"><i class="bi bi-journal-text"></i></span>
+                  <h4>Artículo corto</h4>
+                  <p class="tl-meta"><span class="period">Pendiente de publicación</span><span class="place">Actas del CEV26</span></p>
+                  <p class="paper-title" lang="en">Design and implementation of a voice command recognition system for video games based on MFCC and Dynamic Time Warping</p>
+                </li>
+              </ol>
+
+              <h3 class="col-title"><span class="col-ic"><i class="bi bi-briefcase" aria-hidden="true"></i></span>Experiencia</h3>
+              <ol class="tl">
+                <li class="tl-item">
+                  <h4>Diseño y desarrollo freelance</h4>
+                  <p class="tl-meta"><span class="period">Enero 2024 – noviembre 2025</span><span class="place">Encargos particulares</span></p>
+                  <ul class="tl-list">
+                    <li>Diseño visual y desarrollo de páginas web</li>
+                    <li>Diseño 3D: modelado, texturas y renderizado</li>
+                    <li>Diseño 2D</li>
+                    <li>Edición de vídeo</li>
+                  </ul>
+                </li>
+              </ol>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== Servicios ===================== -->
+      <section id="servicios" class="section">
+        <div class="wrap">
+          <header class="section-head">
+            <p class="kicker"><svg class="kick-graph" viewBox="0 0 24 14" aria-hidden="true"><path d="M3.5 10 12 4l8.5 5.5"/><circle cx="3.5" cy="10" r="2.6"/><circle cx="12" cy="4" r="2.6"/><circle cx="20.5" cy="9.5" r="2.6"/></svg>Servicios</p>
+            <h2>En qué puedo ayudarte</h2>
+            <p class="lead">Colaboro en proyectos freelance de estos ámbitos.</p>
+          </header>
+
+          <ul class="services">
+            <li class="svc">
+              <span class="svc-ic"><i class="bi bi-controller" aria-hidden="true"></i></span>
+              <h3>Videojuegos</h3>
+              <p>Programación, diseño de mecánicas, arte y sonido.</p>
+            </li>
+            <li class="svc">
+              <span class="svc-ic"><i class="bi bi-window-sidebar" aria-hidden="true"></i></span>
+              <h3>Sitios web a medida</h3>
+              <p>Portfolios y páginas profesionales adaptadas a móvil.</p>
+            </li>
+            <li class="svc">
+              <span class="svc-ic"><i class="bi bi-phone" aria-hidden="true"></i></span>
+              <h3>Aplicaciones móviles</h3>
+              <p>Aplicaciones funcionales y con una interfaz cuidada.</p>
+            </li>
+            <li class="svc">
+              <span class="svc-ic"><i class="bi bi-badge-3d" aria-hidden="true"></i></span>
+              <h3>Diseño 3D</h3>
+              <p>Modelado, texturizado, iluminación y render.</p>
+            </li>
+            <li class="svc">
+              <span class="svc-ic"><i class="bi bi-brush" aria-hidden="true"></i></span>
+              <h3>Diseño 2D</h3>
+              <p>Sprites, logotipos e ilustraciones.</p>
+            </li>
+            <li class="svc">
+              <span class="svc-ic"><i class="bi bi-camera-reels" aria-hidden="true"></i></span>
+              <h3>Edición de vídeo y sonido</h3>
+              <p>Montaje, edición y tratamiento de audio.</p>
+            </li>
+          </ul>
+
+          <p class="services-more"><i class="bi bi-plus-circle" aria-hidden="true"></i>¿Buscas otra cosa? <a href="#contacto">Escríbeme</a> y vemos cómo puedo ayudarte.</p>
+        </div>
+      </section>
+
+      <!-- ===================== Contacto ===================== -->
+      <section id="contacto" class="section band">
+        <div class="wrap contact-grid">
+
+          <div>
+            <header class="section-head">
+              <p class="kicker"><svg class="kick-graph" viewBox="0 0 24 14" aria-hidden="true"><path d="M3.5 10 12 4l8.5 5.5"/><circle cx="3.5" cy="10" r="2.6"/><circle cx="12" cy="4" r="2.6"/><circle cx="20.5" cy="9.5" r="2.6"/></svg>Contacto</p>
+              <h2>Hablemos</h2>
+              <p class="lead">¿Tienes un proyecto, una oferta o una propuesta de colaboración? Escríbeme y te responderé lo antes posible.</p>
+            </header>
+
+            <ul class="info">
+              <li>
+                <div class="info-row">
+                  <span class="i-ic"><i class="bi bi-envelope" aria-hidden="true"></i></span>
+                  <span class="i-txt"><span class="i-name">Email</span><span class="i-val" id="mailVal">peremr11@gmail.com</span></span>
+                  <span class="i-acts">
+                    <button class="icon-btn" type="button" data-copy="peremr11@gmail.com" data-copy-label="Email copiado" aria-label="Copiar email"><i class="bi bi-copy" aria-hidden="true"></i></button>
+                    <a class="icon-btn" href="mailto:peremr11@gmail.com" aria-label="Escribir un email"><i class="bi bi-arrow-up-right" aria-hidden="true"></i></a>
+                  </span>
+                </div>
+              </li>
+              <li>
+                <div class="info-row">
+                  <span class="i-ic"><i class="bi bi-telephone" aria-hidden="true"></i></span>
+                  <span class="i-txt"><span class="i-name">Teléfono</span><span class="i-val">+34 622 64 86 81</span></span>
+                  <span class="i-acts">
+                    <button class="icon-btn" type="button" data-copy="+34622648681" data-copy-label="Teléfono copiado" aria-label="Copiar teléfono"><i class="bi bi-copy" aria-hidden="true"></i></button>
+                    <a class="icon-btn" href="tel:+34622648681" aria-label="Llamar"><i class="bi bi-arrow-up-right" aria-hidden="true"></i></a>
+                  </span>
+                </div>
+              </li>
+              <li>
+                <div class="info-row">
+                  <span class="i-ic"><i class="bi bi-geo-alt" aria-hidden="true"></i></span>
+                  <span class="i-txt"><span class="i-name">Ubicación</span><span class="i-val">Vinaròs, Castellón, España</span></span>
+                </div>
+              </li>
+              <li>
+                <a class="info-row" href="https://github.com/peremengual" target="_blank" rel="noopener">
+                  <span class="i-ic"><i class="bi bi-github" aria-hidden="true"></i></span>
+                  <span class="i-txt"><span class="i-name">GitHub</span><span class="i-val">github.com/peremengual</span></span>
+                  <span class="i-go"><i class="bi bi-arrow-up-right" aria-hidden="true"></i></span>
+                </a>
+              </li>
+              <li>
+                <a class="info-row" href="https://www.youtube.com/@PereMengualRoca" target="_blank" rel="noopener">
+                  <span class="i-ic"><i class="bi bi-youtube" aria-hidden="true"></i></span>
+                  <span class="i-txt"><span class="i-name">YouTube</span><span class="i-val">@PereMengualRoca</span></span>
+                  <span class="i-go"><i class="bi bi-arrow-up-right" aria-hidden="true"></i></span>
+                </a>
+              </li>
+              <li>
+                <a class="info-row" href="https://x.com/PereMengualRoca" target="_blank" rel="noopener">
+                  <span class="i-ic"><i class="bi bi-twitter-x" aria-hidden="true"></i></span>
+                  <span class="i-txt"><span class="i-name">X</span><span class="i-val">@PereMengualRoca</span></span>
+                  <span class="i-go"><i class="bi bi-arrow-up-right" aria-hidden="true"></i></span>
+                </a>
+              </li>
+              <li>
+                <a class="info-row" href="https://www.instagram.com/peremr03/" target="_blank" rel="noopener">
+                  <span class="i-ic"><i class="bi bi-instagram" aria-hidden="true"></i></span>
+                  <span class="i-txt"><span class="i-name">Instagram</span><span class="i-val">@peremr03</span></span>
+                  <span class="i-go"><i class="bi bi-arrow-up-right" aria-hidden="true"></i></span>
+                </a>
+              </li>
+              <!-- Cuando recuperes LinkedIn, descomenta este bloque:
+              <li>
+                <a class="info-row" href="https://www.linkedin.com/in/TU-USUARIO" target="_blank" rel="noopener">
+                  <span class="i-ic"><i class="bi bi-linkedin" aria-hidden="true"></i></span>
+                  <span class="i-txt"><span class="i-name">LinkedIn</span><span class="i-val">linkedin.com/in/TU-USUARIO</span></span>
+                  <span class="i-go"><i class="bi bi-arrow-up-right" aria-hidden="true"></i></span>
+                </a>
+              </li>
+              -->
+            </ul>
+          </div>
+
+          <!-- Tarjeta de contacto -->
+          <aside class="contact-card" aria-label="Tarjeta de contacto">
+            <span class="contact-photo"><img src="assets/img/fotoPerfil.jpg" alt="" width="120" height="120" loading="lazy"></span>
+            <p class="contact-name">Pere Mengual Roca</p>
+            <p class="contact-role">Graduado en Diseño y Desarrollo de Videojuegos y estudiante del Máster en Sistemas Inteligentes</p>
+            <ul class="contact-tags" aria-label="Áreas">
+              <li><i class="bi bi-controller" aria-hidden="true"></i>Videojuegos</li>
+              <li class="is-ia"><i class="bi bi-cpu" aria-hidden="true"></i>Inteligencia artificial</li>
+              <li><i class="bi bi-box" aria-hidden="true"></i>Diseño 2D y 3D</li>
+            </ul>
+            <a class="contact-email" href="mailto:peremr11@gmail.com">peremr11@gmail.com</a>
+            <div class="contact-actions">
+              <a class="btn btn-primary" href="mailto:peremr11@gmail.com"><i class="bi bi-envelope" aria-hidden="true"></i> Enviar un email</a>
+              <a class="btn btn-ghost" href="assets/docs/CV-Pere-Mengual-Roca.pdf" target="_blank" rel="noopener"><i class="bi bi-file-earmark-arrow-down" aria-hidden="true"></i> Descargar CV</a>
+            </div>
+          </aside>
 
         </div>
+      </section>
 
+    </main>
+
+    <footer class="foot">
+      <div class="wrap foot-inner">
+        <span>© <span data-year>2026</span> Pere Mengual Roca</span>
+        <span>Grado en Diseño y Desarrollo de Videojuegos y Máster en Sistemas Inteligentes, UJI</span>
+        <a href="#inicio">Volver arriba</a>
       </div>
+    </footer>
+  </div>
 
-    </section><!-- /Contact Section -->
+  <a href="#inicio" class="to-top" aria-label="Volver arriba"><i class="bi bi-arrow-up" aria-hidden="true"></i></a>
 
-  </main>
+  <!-- Visor de imágenes de los proyectos -->
+  <dialog class="lb" aria-labelledby="lbTitle">
+    <div class="lb-inner">
+      <div class="lb-media">
+        <img class="lb-img" alt="">
+        <button class="icon-btn lb-nav lb-prev" type="button" aria-label="Imagen anterior"><i class="bi bi-chevron-left" aria-hidden="true"></i></button>
+        <button class="icon-btn lb-nav lb-next" type="button" aria-label="Imagen siguiente"><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
+        <span class="lb-count"></span>
+      </div>
+      <div class="lb-info">
+        <p class="meta lb-meta"></p>
+        <h3 id="lbTitle" class="lb-title"></h3>
+        <p class="lb-desc"></p>
+        <ul class="tags lb-tags"></ul>
+      </div>
+    </div>
+    <button class="icon-btn lb-close" type="button" aria-label="Cerrar"><i class="bi bi-x-lg" aria-hidden="true"></i></button>
+  </dialog>
 
-  <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <div class="toast" role="status" aria-live="polite"></div>
 
-  <!-- Preloader -->
-  <div id="preloader"></div>
-
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/typed.js/typed.umd.js"></script>
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-
-  <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
 
 </body>
